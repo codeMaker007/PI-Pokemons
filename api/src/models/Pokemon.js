@@ -5,41 +5,72 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('pokemon', {
     id: {
-      //UUID genera un numero random con letras y numeros que va a ser unico y no se va a repetir.
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      unique: true
     },
-    img:{
-      type: DataTypes.STRING,
-    },
+
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true
     },
+
     hp: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.FLOAT(1),
+      validate: {
+        min: 1,
+        max: 100,
+      }
     },
+
     attack: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.FLOAT(1),
+      validate: {
+        min: 1,
+        max: 100,
+      }
     },
-    defence: {
-      type: DataTypes.INTEGER,
+
+    defense: {
+      type: DataTypes.FLOAT(1),
+      validate: {
+        min: 1,
+        max: 100,
+      }
     },
+
     speed: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.FLOAT(1),
+      validate: {
+        min: 1,
+        max: 100,
+      }
     },
+    
     height: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.INTEGER
     },
+    
     weight: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.INTEGER
     },
-    createdInDataBase: {
+
+    img: {
+      type: DataTypes.STRING,
+      defaultValue: "https://c.tenor.com/1W4gpgv6GU8AAAAd/sus-eyebrow.gif"
+    },
+
+    createdInDb: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
       defaultValue: true,
-      },
+      allowNull: false
+    }
+
+  }, {
+    timestamps: false
   });
+
 };

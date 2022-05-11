@@ -6,7 +6,7 @@ export default function LandingPage() {
     return(
         <div className="background">
             <div className="container">
-                <h4 className="Text">Welcome to the poke-experience</h4>
+                <h4 className="Text">Click on the poke-ball!</h4>
                 <Link to = "/home">
                     <button className="button"></button>
                 </Link>

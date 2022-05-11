@@ -14,11 +14,12 @@
 }
 
 .createTitle{
-    color: red;
-    font-weight: lighter;
+    color: rgb(26, 0, 155);
+    font-size: large;
+    font-weight: 500;
     justify-content: center;
-    text-shadow: 2px 2px 2px rgb(25, 25, 25);
-    margin-top: 10px;
+    text-shadow: 2px 2px 2px rgb(116, 121, 160);
+    margin-top: 40px;
 }
 
 .errors{

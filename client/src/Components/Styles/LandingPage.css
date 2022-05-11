@@ -51,8 +51,9 @@
 
 .Text {
     color: black;
-    font-size: x-large;
-    font-weight: 100;
+    font-size: xx-large;
+    margin-top: 20px;
+    font-weight: 600;
     text-shadow: 25px 10px 25px rgba(255, 255, 255, 0.75), 25px 10px 25px rgba(255, 255, 255, 0.75);
 }
 

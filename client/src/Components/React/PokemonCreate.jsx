@@ -60,7 +60,6 @@ export default function PokeCreate(){
             ...input,
             [e.target.name] : e.target.value
         }))
-        console.log(input)
     }
 
     function handleSelect(e){
@@ -71,7 +70,7 @@ export default function PokeCreate(){
     }
 
     function handleSubmit(e){
-        console.log(input)
+        
         if(!input.name){
             e.preventDefault();
             return alert("Can't create a Pokemon without a name")
@@ -109,8 +108,7 @@ export default function PokeCreate(){
         <div className='divForm'>
             <NavBar/>
             <div className='title-submit'>
-                <h2 className='createTitle'>Pokemon Creation:</h2>
-                <h3 className='createTitle'>Create:
+                <h3 className='createTitle'>Click on the poke-ball to create:
                 <button id='submit' className='titleCreate' type='submit' onClick={(e) => handleSubmit(e)}/>
                 </h3>
             </div>

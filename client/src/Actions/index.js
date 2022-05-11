@@ -65,7 +65,6 @@ export function orderByAbc (payload) {
 }
 
 export function filterByType (payload) {
-    console.log(payload)
     return {
         type: "FILTER_BY_TYPE",
         payload

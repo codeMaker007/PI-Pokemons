@@ -9,7 +9,6 @@ export default function Search() {
 
     const handleSearchBar = (e) => {
         setName(e.target.value)
-        console.log(name)
     }
 
     const handleSubmit = (e) => {
